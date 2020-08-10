@@ -11,6 +11,23 @@ function Experience() {
           <hr style={{ borderColor: "white" }}></hr>
           <Timeline lineColor={"#f44292"}>
             <TimelineItem
+              key="001"
+              dateText="05/2019 – Current"
+              dateInnerStyle={{ background: "#e86971", color: "white" }}
+              bodyContainerStyle={{
+                background: "#011931",
+                padding: "20px",
+                borderRadius: "8px",
+                boxShadow: "0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)",
+              }}
+            >
+              <h3 style={{ color: "white" }}>Freelance</h3>
+              <h4 style={{ color: "white" }}>Web Developer</h4>
+              <p style={{ color: "white", marginTop: "15px" }}>
+                Build websites and web apps using React.
+              </p>
+            </TimelineItem>
+            <TimelineItem
               key="002"
               dateText="06/2019 – 08/2019"
               dateInnerStyle={{ background: "#e86971", color: "white" }}
@@ -24,15 +41,13 @@ function Experience() {
               <h3 style={{ color: "white" }}>ChuraData</h3>
               <h4 style={{ color: "white" }}>Software Engineer Intern</h4>
               <p style={{ color: "white", marginTop: "15px" }}>
-                Est incididunt sint eu minim dolore mollit velit velit commodo
-                ex nulla exercitation. Veniam velit adipisicing anim excepteur
-                nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla
-                officia irure reprehenderit laborum fugiat dolore in elit.
-                Adipisicing do qui duis Lorem est.
+                Used modern technologies such as Docker and AWS to build a
+                system that automates large-scale text data extraction and
+                preprocessing, and trained a natural language model.
               </p>
             </TimelineItem>
             <TimelineItem
-              key="002"
+              key="003"
               dateText="08/2018 - Current"
               dateInnerStyle={{ background: "#e86971", color: "white" }}
               bodyContainerStyle={{
@@ -49,7 +64,7 @@ function Experience() {
               </p>
             </TimelineItem>
             <TimelineItem
-              key="002"
+              key="004"
               dateText="09/2016 - 08/2018"
               dateInnerStyle={{ background: "#e86971", color: "white" }}
               bodyContainerStyle={{

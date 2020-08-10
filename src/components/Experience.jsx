@@ -12,7 +12,7 @@ function Experience() {
           <Timeline lineColor={"#f44292"}>
             <TimelineItem
               key="001"
-              dateText="05/2019 – Current"
+              dateText="05/2020 – Current"
               dateInnerStyle={{ background: "#e86971", color: "white" }}
               bodyContainerStyle={{
                 background: "#011931",

@@ -1,0 +1,31 @@
+.wrapper {
+  background-color: #f6f9fc;
+  color: #011931;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.portrait {
+  border-radius: 50%;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.1);
+  width: 250px;
+  height: 250px;
+  border: 3px solid #011931;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.portraitContainer {
+  text-align: center;
+}
+
+.skills {
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  padding: 50px 100px;
+  text-align: center;
+}

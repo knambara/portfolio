@@ -1,0 +1,60 @@
+.wrapper {
+  position: relative;
+  background: linear-gradient(-90deg, #02203c, #001528);
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+.image {
+  object-fit: cover;
+  opacity: 0.6;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image:hover {
+  opacity: 1;
+}
+
+.text1,
+.text2 {
+  color: white;
+}
+
+@media (min-width: 992px) {
+  .wrapper {
+    top: 0px;
+  }
+
+  .titleText {
+    margin: auto auto;
+  }
+
+  .text1 {
+    font-size: 2rem;
+  }
+
+  .text2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    top: -10px;
+  }
+
+  .titleText {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .text1 {
+    font-size: 2rem;
+  }
+
+  .text2 {
+    font-size: 2rem;
+  }
+}

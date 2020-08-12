@@ -52,15 +52,14 @@ function About() {
                 </p>
                 <p>
                   I am a passionate software engineer, and my expertise lie on
-                  building web/iOS applications and natural language processing.
-                  Outside of programming, some of my hobbies include playing the
-                  piano, reading non-fiction books, running, and playing
-                  basketball.
+                  building web/iOS applications, as well as on natural language
+                  processing. Outside of programming, some of my hobbies include
+                  playing piano, reading,running, and playing basketball.
                 </p>
                 <p>
                   Upon graduating Brown, I would love to work at a tech company
-                  where I can continuously learn and implement meaningful
-                  projects!
+                  where I can continuously learn modern technologies and
+                  implement meaningful projects!
                 </p>
               </div>
 

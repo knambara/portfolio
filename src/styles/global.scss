@@ -31,7 +31,8 @@ body {
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
   color: #21e6c1;
-  transition: color 0.5s;
+  transition: color 0.5s ease-out;
+
 }
 
 /********** Side Drawer *********/
@@ -70,9 +71,11 @@ body {
 }
 
 .side-drawer a:hover,
-.side-drawer a:active {
+.side-drawer a:active,
+.footer__icon:hover {
   text-decoration: none;
   color: #21e6c1;
+  transition: color 0.5s linear;
 }
 
 .backdrop {
@@ -86,6 +89,7 @@ body {
 }
 
 @media (min-width: 992px) {
+
   .side-drawer,
   .backdrop {
     display: none;
@@ -127,6 +131,7 @@ body {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -141,10 +146,12 @@ body {
   background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
   z-index: 2;
 }
+
 .slider::before {
   left: 0;
   top: 0;
 }
+
 .slider::after {
   right: 0;
   top: 0;
@@ -160,7 +167,11 @@ footer {
   margin-bottom: 0px;
   padding-top: 2rem;
   padding-bottom: 1rem;
-  color: white;
   text-align: center;
   font-size: small;
+  color: white;
+}
+
+footer>* {
+  margin: 0px 20px;
 }

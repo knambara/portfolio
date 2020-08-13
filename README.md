@@ -103,7 +103,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 # Tech Used:
 
 - Gatsby.js
-- Netlify.js
+- Netlify
 - HTML
 - CSS
 - GraphQL

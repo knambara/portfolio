@@ -47,25 +47,24 @@ function About() {
               </div>
               <div class={`col-sm-6 py-4 px-4`}>
                 <p>
-                  Hello! My name is Kento, and I am an undergraduate student
-                  studying Computer Science at Brown University.
+                  My name is Kento, and I am an undergraduate student studying
+                  Computer Science at Brown University.
                 </p>
                 <p>
                   I am a passionate software engineer, and my expertise lie on
                   building web/iOS applications, as well as on natural language
-                  processing. Outside of programming, some of my hobbies include
-                  playing piano, reading,running, and playing basketball.
+                  processing. Outside of programming.
                 </p>
                 <p>
-                  Upon graduating Brown, I would love to work at a tech company
+                  Upon graduating Brown, I'd love to work at a tech company
                   where I can continuously learn modern technologies and
-                  implement meaningful projects!
+                  contribute in meaningful projects!
                 </p>
               </div>
 
               <div className={`container ${aboutStyles.skills}`}>
                 <h3>Programming Skills</h3>
-                <h4>Here are some of the technologies I've worked with</h4>
+                <h4>Here are some of my favorite technologies</h4>
 
                 <div className="slider">
                   <div className="slide">

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 import Fade from "@material-ui/core/Fade"
 import Grow from "@material-ui/core/Grow"
 import Img1 from "../images/title1.jpg"
@@ -15,9 +16,18 @@ function Title() {
           author
         }
       }
+      file(extension: { eq: "jpg" }, name: { eq: "title" }) {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          fluid(maxWidth: 992, maxHeight: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   const authorName = data.site.siteMetadata.author
+  const titleImage = data.file.childImageSharp.fluid
 
   useEffect(() => setTimeout(() => setMounted(true), 1000), [])
   useEffect(() => setTimeout(() => setSlideIn(true), 1300), [])
@@ -36,11 +46,12 @@ function Title() {
               </Grow>
             </div>
             <div className="col-lg-8">
-              <img
+              {/* <img
                 src={Img1}
                 className={`img-fluid ${titleStyles.image}`}
                 alt="title"
-              />
+              /> */}
+              <Img fluid={titleImage} className={titleStyles.image} />
             </div>
           </div>
         </div>

@@ -20,7 +20,7 @@ function Contact() {
         id="contact"
         style={{
           opacity: visible ? 1 : 0,
-          transition: "opacity 1000ms linear",
+          transition: "opacity 500ms linear",
         }}
       >
         <div className={`${contactStyles.wrapper}`}>

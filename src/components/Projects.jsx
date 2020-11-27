@@ -55,109 +55,89 @@ function Projects(props) {
     }
   `)
 
-  const [visible, setVisible] = useState(false)
-  const [renderedProjects, setRenderedProjects] = useState([])
+  // const [visible, setVisible] = useState(false)
+  // const [renderedProjects, setRenderedProjects] = useState([])
 
-  useEffect(() => {
-    if (visible) {
-      scheduleNextUpdate()
-    }
-  }, [visible])
+  // useEffect(() => {
+  //   if (visible) {
+  //     scheduleNextUpdate()
+  //   }
+  // }, [visible])
 
-  const scheduleNextUpdate = () => {
-    setTimeout(updateRenderedProjects, 150)
-  }
+  // const scheduleNextUpdate = () => {
+  //   setTimeout(updateRenderedProjects, 150)
+  // }
 
-  const updateRenderedProjects = () => {
-    setRenderedProjects(prev => [
-      ...prev,
-      data.allMarkdownRemark.edges[prev.length],
-    ])
-  }
+  // const updateRenderedProjects = () => {
+  //   setRenderedProjects(prev => [
+  //     ...prev,
+  //     data.allMarkdownRemark.edges[prev.length],
+  //   ])
+  // }
 
-  useEffect(() => {
-    if (
-      renderedProjects.length !== 0 &&
-      renderedProjects.length !== data.allMarkdownRemark.edges.length
-    ) {
-      console.log(renderedProjects.count)
-      scheduleNextUpdate()
-    }
-  }, [renderedProjects])
+  // useEffect(() => {
+  //   if (
+  //     renderedProjects.length !== 0 &&
+  //     renderedProjects.length !== data.allMarkdownRemark.edges.length
+  //   ) {
+  //     console.log(renderedProjects.count)
+  //     scheduleNextUpdate()
+  //   }
+  // }, [renderedProjects])
+
+  const markDownEdges = data.allMarkdownRemark.edges
 
   return (
-    <VizSensor
-      partialVisibility={true}
-      onChange={isVisible => {
-        if (isVisible === true && visible !== true) {
-          console.log("h")
-          setVisible(isVisible)
-        }
-      }}
-    >
-      <section
-        id="projects"
-        style={{
-          opacity: visible ? 1 : 0,
-          transition: "opacity 1000ms linear",
-        }}
-      >
-        <div className={`${projectsStyles.wrapper}`}>
-          <div className="container">
-            <h2>Projects</h2>
-            <hr />
-            <div className="row">
-              {renderedProjects.map(edge => {
-                return (
-                  <div className="col-lg-4 col-md-6 text-center">
-                    <Zoom in={visible}>
-                      <Card
-                        className={`${classes.root} ${projectsStyles.card} my-4`}
-                      >
-                        <CardActionArea>
-                          <CardMedia
-                            className={classes.media}
-                            image={`${edge.node.fields.slug}.png`}
-                            title={edge.node.frontmatter.title}
-                          />
-                          <CardContent>
-                            <Typography
-                              gutterBottom
-                              variant="h5"
-                              component="h2"
-                            >
-                              {edge.node.frontmatter.title}
-                            </Typography>
-                            <Typography
-                              variant="body2"
-                              color="textSecondary"
-                              component="p"
-                            >
-                              {edge.node.frontmatter.description}
-                            </Typography>
-                          </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                          <Button size="small" color="primary">
-                            <a
-                              href={edge.node.frontmatter.link}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              Link
-                            </a>
-                          </Button>
-                        </CardActions>
-                      </Card>
-                    </Zoom>
-                  </div>
-                )
-              })}
-            </div>
+    <section id="projects">
+      <div className={`${projectsStyles.wrapper}`}>
+        <div className="container">
+          <h2>Projects</h2>
+          <hr />
+          <div className="row">
+            {markDownEdges.map(edge => {
+              return (
+                <div className="col-lg-4 col-md-6 text-center">
+                  <Card
+                    className={`${classes.root} ${projectsStyles.card} my-4`}
+                  >
+                    <CardActionArea href={edge.node.frontmatter.link}>
+                      <CardMedia
+                        className={classes.media}
+                        image={`${edge.node.fields.slug}.png`}
+                        title={edge.node.frontmatter.title}
+                      />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                          {edge.node.frontmatter.title}
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          color="textSecondary"
+                          component="p"
+                        >
+                          {edge.node.frontmatter.description}
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    {/* <CardActions>
+                      <Button size="small" color="primary">
+                        <a
+                          href={edge.node.frontmatter.link}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Link
+                        </a>
+                      </Button>
+                    </CardActions> */}
+                  </Card>
+                </div>
+              )
+            })}
           </div>
         </div>
-      </section>
-    </VizSensor>
+      </div>
+    </section>
   )
 }
 

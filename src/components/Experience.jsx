@@ -21,15 +21,18 @@ function Experience() {
                 boxShadow: "0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)",
               }}
             >
-              <h3 style={{ color: "white" }}>Freelance</h3>
-              <h4 style={{ color: "white" }}>Web Developer</h4>
+              <h3 style={{ color: "white" }}>Independent Contractor</h3>
+              <h4 style={{ color: "white" }}>Software Developer</h4>
               <p style={{ color: "white", marginTop: "15px" }}>
-                Build websites and web apps using React.
+                • Designed, developed, and deployed applications for various
+                clients using Python and React.js • Utilized GraphQL to connect
+                client applications with Headless CMS for seamless query for web
+                pages
               </p>
             </TimelineItem>
             <TimelineItem
               key="002"
-              dateText="06/2019 – 08/2019"
+              dateText="05/2019 – 08/2019"
               dateInnerStyle={{ background: "#e86971", color: "white" }}
               bodyContainerStyle={{
                 background: "#011931",
@@ -41,9 +44,13 @@ function Experience() {
               <h3 style={{ color: "white" }}>ChuraData</h3>
               <h4 style={{ color: "white" }}>Software Engineer Intern</h4>
               <p style={{ color: "white", marginTop: "15px" }}>
-                Used modern technologies such as Docker and AWS to build a
-                system that automates large-scale text data extraction and
-                preprocessing, and trained a natural language model.
+                • Built an automation system in Python that extracts and
+                pre-processes 5 million language data per day • Designed
+                algorithm to handle API calls from data source and store
+                normalized data to Amazon RDS • Trained a Japanese NLP model to
+                accurately model semantic correlations between various social
+                trends • Implemented a pipeline between MySQL database and NLP
+                model and deployed using Docker and AWS
               </p>
             </TimelineItem>
             <TimelineItem
@@ -58,9 +65,10 @@ function Experience() {
               }}
             >
               <h3 style={{ color: "white" }}>Brown University, Providence</h3>
-              <h4 style={{ color: "white" }}>Matriculation</h4>
+              <h4 style={{ color: "white" }}>Major: Computer Science</h4>
               <p style={{ color: "white", marginTop: "15px" }}>
-                Transferred to Brown University, concentrating in CS.
+                Transferred to Brown University, concentrating in Computer
+                Science.
               </p>
             </TimelineItem>
             <TimelineItem
@@ -75,7 +83,7 @@ function Experience() {
               }}
             >
               <h3 style={{ color: "white" }}>Waseda University, Tokyo</h3>
-              <h4 style={{ color: "white" }}>Matriculation</h4>
+              <h4 style={{ color: "white" }}>Major: International Relations</h4>
               <p style={{ color: "white", marginTop: "15px" }}>
                 Enrolled in Waseda University, concentrating in International
                 Relations.
